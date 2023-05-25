@@ -1,0 +1,89 @@
+﻿@page
+@model RazorPages.Pages.CountersModel
+
+<h2>GetAllCounters</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>KEY</th>
+            <th>VALUE</th>
+        </tr>
+    </thead>
+    <tbody id="counterTableBody">
+    </tbody>
+</table>
+<br>
+<input type="button" onclick="GetAllCounters()" value="GetAllCounters" />
+<br>
+<br>
+<h2>GetCountOfKeyAndValueGreaterThanOne</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>KEY</th>
+            <th>COUNT</th>
+            <th>COUNTMORETHENONE</th>
+        </tr>
+    </thead>
+    <tbody id="counterOfKeyTableBody">
+    </tbody>
+</table>
+<br>
+<input type="button" onclick="GetCountOfKeyAndValueGreaterThanOne()" value="GetCountOfKey" />
+
+@section Scripts {
+<script>
+    function GetAllCounters() {
+        $.ajax({
+            url: "/Counter/GetAllCounters",
+            method: 'GET',
+            success: function (data) {
+                var counters = JSON.parse(data);
+                var tableBody = $("#counterTableBody");
+                
+                tableBody.empty();
+
+                for (var i = 0; i < counters.length; i++) {
+                    var counter = counters[i];
+                    var row = "<tr>" +
+                        "<td>" + counter.Id + "</td>" +
+                        "<td>" + counter.Key + "</td>" +
+                        "<td>" + counter.Value + "</td>" +
+                        "</tr>";
+                    tableBody.append(row);
+                }
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
+    }
+
+    function GetCountOfKeyAndValueGreaterThanOne() {
+        $.ajax({
+            url: "/Counter/GetCountOfKeyAndValueGreaterThanOne",
+            method: 'GET',
+            success: function (data) {
+                var counters = JSON.parse(data);
+                var tableBody = $("#counterOfKeyTableBody");
+                
+                tableBody.empty();
+
+                for (var i = 0; i < counters.length; i++) {
+                    var counter = counters[i];
+                    var row = "<tr>" +
+                        "<td>" + counter.Key + "</td>" +
+                        "<td>" + counter.Count + "</td>" +
+                        "<td>" + counter.CountMoreThenOne + "</td>" +
+                        "</tr>";
+                    tableBody.append(row);
+                }
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
+    }
+</script>
+}

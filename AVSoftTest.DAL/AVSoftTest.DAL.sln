@@ -5,9 +5,11 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AVSoftTest.DAL", "AVSoftTest.DAL\AVSoftTest.DAL.csproj", "{CC894837-17D7-40F6-A14C-93B235C00A78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVSoftTest.BLL", "AVSoftTest.BLL\AVSoftTest.BLL.csproj", "{C8D92B5D-C289-4761-A60F-8D1B6280BB19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AVSoftTest.BLL", "AVSoftTest.BLL\AVSoftTest.BLL.csproj", "{C8D92B5D-C289-4761-A60F-8D1B6280BB19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVSoftTest.API", "AVSoftTest.API\AVSoftTest.API.csproj", "{E1DB98C9-EBFC-4299-8823-8723AC4559ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AVSoftTest.API", "AVSoftTest.API\AVSoftTest.API.csproj", "{E1DB98C9-EBFC-4299-8823-8723AC4559ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages", "RazorPages\RazorPages.csproj", "{0361F6CB-F156-4DD7-8C93-6EA9408EB3BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E1DB98C9-EBFC-4299-8823-8723AC4559ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1DB98C9-EBFC-4299-8823-8723AC4559ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1DB98C9-EBFC-4299-8823-8723AC4559ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0361F6CB-F156-4DD7-8C93-6EA9408EB3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0361F6CB-F156-4DD7-8C93-6EA9408EB3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0361F6CB-F156-4DD7-8C93-6EA9408EB3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0361F6CB-F156-4DD7-8C93-6EA9408EB3BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
