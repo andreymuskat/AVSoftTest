@@ -14,8 +14,7 @@ namespace RazorPages
             // Add services to the container.
             builder.Services.AddRazorPages();
 
-			builder.Services.AddControllers();
-			builder.Services.AddRazorPages();
+
 			builder.Services.AddScoped<ICounterManager, CounterManager>();
 			builder.Services.AddScoped<ICounterRepository, CounterRepository>();
 			builder.Services.AddSingleton<Context>();
